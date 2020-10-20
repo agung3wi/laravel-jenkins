@@ -12,6 +12,7 @@ node {
             sh 'mkdir -p ~/.ssh'
             sh 'ssh-keyscan -H "192.168.88.40" > ~/.ssh/known_hosts'
             sh 'rsync -rav --delete ./ pttas@192.168.88.40:/home/admin/web/devops1.appdemo.online/ --exclude=.env --exclude=.git --exclude=storage'
+            sh "ssh pttas@192.168.88.40  'cd /home/admin/web/devops1.appdemo.online && php artisan migrate'" // migration database
         }
     }
 }
