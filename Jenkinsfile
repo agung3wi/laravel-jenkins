@@ -3,8 +3,7 @@ node {
 
     // composer install
     docker.image('composer').inside('-u root') {
-            sh 'composer install'
-        }
+        sh 'composer install'
     }
 
     // upload file
