@@ -52,7 +52,7 @@
                         @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a class="nav-link" href="{{route('address')}}">
                                 Alamat
                             </a>
                         </li>
